@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .navbar {
+            width: 100%;
+            padding: 20px;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .navbar .logo {
+            max-width: 150px;
+            height: auto;
+        }
+
+        .navbar ul {
+            list-style: none;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .navbar ul li {
+            margin: 20px;
+        }
+
+        .navbar ul li a {
+            text-decoration: none;
+            text-transform: uppercase;
+            color: black;
+            font-weight: 600;
+
+            font-weight: 600;
+        }
+
+        li a:hover {
+            background: black;
+            transition: 0.5s;
+        }
+
+        .navbar a:hover {
+            color: white;
+        }
+
+        .hamburger {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: black;
+            background-color: white;
+            height: 20px;
+            line-height: 1;
+            display: none;
+        }
+
+        .logo {
+            width: 150px;
+            margin-top: -10px;
+            cursor: pointer;
+        }
+
+        .intro {
+            width: 100%;
+            padding: 50px 20px;
+            background: transparent linear-gradient(180deg, #6b63f8 0%, #7feeb1 70%);
+            opacity: 1;
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+        }
+
+        section h1 {
+            text-align: center;
+            font-size: 2.5rem;
+        }
+
+        .intro p {
+            font-size: 1.5rem;
+            color: black;
+            text-align: center;
+        }
+
+        button {
+            white-space: nowrap;
+            padding: 15px 30px;
+            border-radius: 25px;
+            color: black;
+            border: 2px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            font-weight: 600;
+            margin: 0px 10px;
+            background: rgb(0, 155, 226);
+            margin-top: 1%;
+
+        }
+
+
+        .container {
+            padding: 20px;
+            width: 100%;
+            height: 70px;
+            background: #FFFFFF 0% 0% no-repeat padding-box;
+            box-shadow: 0px 3px 6px #00000029;
+            opacity: 1;
+            text-align: center;
+        }
+
+        .span {
+            margin-top: 7%;
+            margin-left: 12%;
+            margin-right: 12%;
+            margin-bottom: 7%;
+        }
+
+        .span img {
+            width: 100%;
+            height: auto;
+        }
+
+        .footerBottom {
+            background-color: black;
+            padding: 10px;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        .footerBottom p {
+            color: white;
+        }
+
+        .designer {
+            opacity: 0.7;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 400;
+            margin: 0px 5px;
+        }
+
+        @media screen and (max-width: 768px) {
+            .navbar ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .navbar ul li {
+                margin: 10px 0;
+            }
+
+            .intro {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .intro h1 {
+                font-size: 2rem;
+            }
+
+            .intro p {
+                font-size: 1.2rem;
+            }
+
+
+            button {
+                font-size: 1rem;
+                padding: 10px 20px;
+                flex-direction: column-reverse;
+                margin-left: 19%;
+                margin-bottom: 4%;
+                margin-top: 3%;
+
+
+
+            }
+
+            .span {
+                margin-right: 7%;
+                margin-top: 19%;
+                margin-left: 7%;
+            }
+
+
+
+            .footerBottom {
+                margin-top: 35%;
+            }
+
+        }
+
+        @media (max-width:550px) {
+            nav {
+                width: 100vw;
+            }
+
+            .hamburger {
+                display: block;
+                border-bottom: 1px solid #fff;
+
+            }
+
+            .hamburger+ul {
+                flex-direction: column;
+                display: none;
+            }
+
+            nav ul li {
+
+                border-bottom: 1px solid #fff;
+            }
+
+            .hamburger:hover+ul {
+                display: flex;
+
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <a href="../../index.html"><img class="logo" src="../../images/Logo.jpg"></a>
+        <div class="hamburger">&#9776;</div>
+
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact Us</a></li>
+        </ul>
+    </div>
+    <section class="intro">
+        <h1>Morning Coffee</h1>
+        <br>
+        <p>Prepare your self to be amazed</p>
+        <div class="button">
+            <a href="./landingpage2.zip" download="./landingpage2.zip"><button type="button">Download The
+                    Project</button></a>
+            <a href="./landingPage2.html" target="_blank"><button type="button">View The
+                    Project</button></a>
+        </div>
+    </section>
+
+    <section class="container">
+        <div>
+            <img class="html" src="../../images/html.png">
+            <img class="css" src="../../images/css.png">
+            <!--  <img class="bootstrap" src="bootstrap.png">
+                <img class="sass" src="sass.png"> -->
+        </div>
+    </section>
+
+    <section class="span">
+        <img src="../../images/page2.png" alt="landingPage1">
+    </section>
+    <footer>
+        <div class="footerBottom">
+            <p>Copyright &copy;2024; desined by <span class="designer">Sarel Dery</span></p>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -39,6 +39,16 @@ ul {
     list-style: none;
 }
 
+button {
+    margin-bottom: 10px;
+    width: 100%;
+    margin-top: 5px;
+    background-color: #ffffff;
+    color: black;
+    border-radius: 30px;
+    border: 30px;
+}
+
 .section {
     background: var(--bg-black-900);
     min-height: 100vh;

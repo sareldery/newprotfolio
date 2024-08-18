@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+#first {
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100vh;
+    background: transparent linear-gradient(180deg, #281EFF 0%, #2DFF8C 100%);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+#first h1 {
+    font-size: 150px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#first p {
+    font-size: 27px;
+
+    font-family: Arial;
+}
+
+.span p2 {
+    font-size: 20px;
+
+    line-height: 1.5;
+    font-family: arial;
+}
+
+form {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    margin: 1em 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-control {
+    display: flex;
+    flex-direction: column-reverse;
+    margin: auto;
+    margin: 1em 0;
+}
+
+.form-control>input {
+    width: 418px;
+    height: 35px;
+    background: #F6F6F624 0% 0% no-repeat padding-box;
+    border: 2px solid #FFFFFF;
+    opacity: 1;
+    margin-left: 20px;
+}
+
+.form-control>label {
+    font: normal normal bold 16px/24px Heebo;
+    color: #FFFFFF;
+}
+
+button {
+    padding: 7px 50px;
+    background: #FFFFFF;
+    color: 011560;
+    font: normal normal bold 16px/24px Heebo;
+    margin-top: 2%;
+    border: none;
+    color: #1C1C1C;
+}
+
+@media (max-width: 768px) {
+
+    #first {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+        height: 100vh;
+    }
+
+    .form-control>input {
+        width: 80%;
+    }
+
+    .form-control>label {
+        font: normal normal bold 10px/14px Heebo;
+    }
+
+    #first>h1 {
+        font: normal normal 900 50px/41px Heebo;
+    }
+
+    #first>p {
+        font: normal normal normal 15px/20px Heebo;
+        text-align: center;
+        width: 100%;
+        display: inline-block;
+
+    }
+
+
+
+    form {
+        width: 100%;
+        margin-top: 5em;
+        flex-direction: column-reverse;
+    }
+}

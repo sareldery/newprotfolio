@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            overflow-x: hidden;
+            /* Prevent horizontal scrolling */
+        }
+
+        #container {
+            display: flex;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+        .container-img {
+            /* width: 23%;
+            height: 55%; */
+            margin-left: 10%;
+            margin-top: 10%;
+
+        }
+
+        .socialIcons {
+            display: flex;
+            justify-content: left;
+            position: relative;
+            z-index: 10000;
+        }
+
+        .socialIcons a {
+            display: inline-block;
+            text-decoration: none;
+            padding: 8px;
+            background-color: #FDBD03;
+            margin-left: 8px;
+            border-radius: 50%;
+        }
+
+
+        .socialIcons a i {
+            font-size: 2em;
+            color: black;
+            opacity: 1;
+        }
+
+
+        .container-form-title {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: start;
+        }
+
+        .container-form {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            /* align-items: center; */
+            margin-left: 17%;
+            margin-right: 0;
+        }
+
+        .container-form-title>h1 {
+            font: normal normal 900 43px/63px Heebo;
+            color: #FDBD03;
+            margin-top: 35%;
+        }
+
+        .container-form-title>p {
+            font: normal normal normal 20px/29px Heebo;
+            color: #020253;
+        }
+
+        .form-control {
+            display: flex;
+            flex-direction: column;
+            margin: auto;
+            margin: 1em 0;
+        }
+
+        .form-lables {
+            display: flex;
+            flex-direction: row;
+            margin: auto;
+            margin: 1em 0;
+        }
+
+        .form-control>input {
+            width: 292px;
+            height: 50px;
+            background: #e5eeff 0% 0% no-repeat padding-box;
+            border: 0;
+            border-bottom: 4px solid #FDBD03;
+            margin-left: 1em;
+        }
+
+        .form-control>label {
+            font: normal normal bold 16px/24px Heebo;
+            color: #2c2c2c;
+        }
+
+        .form-control>textarea {
+            width: 66%;
+            font: normal normal bold 16px/24px Heebo;
+            color: #2c2c2c;
+            background: #e5eeff 0% 0% no-repeat padding-box;
+            border: 0;
+            border-bottom: 4px solid #FDBD03;
+            margin-left: 1em;
+            resize: none;
+        }
+
+        button {
+            width: 140px;
+            height: 40px;
+            background: #FDBD03 0% 0% no-repeat padding-box;
+            border: #FDBD03;
+            font: normal normal bold 16px/24px Heebo;
+        }
+
+        .footer-socialIcons {
+            display: flex;
+            justify-content: left;
+            position: relative;
+            z-index: 10000;
+            /* margin-top: -0.2%; */
+        }
+
+        .footer-socialIcons a {
+            display: inline-block;
+            text-decoration: none;
+            padding: 8px;
+            background-color: #FDBD03;
+            margin-left: 8px;
+            border-radius: 50%;
+        }
+
+
+        .footer-socialIcons a i {
+            font-size: 2em;
+            color: black;
+            opacity: 1;
+        }
+
+        .square-top-right {
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 30%;
+            height: 1%;
+            background-color: #FDBD03;
+            z-index: 9999;
+        }
+
+        .square-bottom-left {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 50%;
+            height: 1%;
+            background-color: #FDBD03;
+            z-index: 9999;
+        }
+
+        @media (min-width: 350px) and (max-width: 1200px) {
+            body {
+                overflow-x: hidden;
+                /* Prevent horizontal scrolling */
+            }
+
+            #container {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                width: 100%;
+                height: 100vh;
+                position: relative;
+            }
+
+            .container-img {
+                width: 20%;
+                /* Adjusted width */
+                /* margin-top: -10%; */
+                /* Removed margin-top */
+                position: absolute;
+                /* Position absolutely */
+                top: 5vh;
+                /* Position at the top */
+                left: 0;
+                /* Align to the left */
+                z-index: 1;
+                /* Ensure it's above other content */
+                margin-left: 40%;
+            }
+
+            .container-form {
+                width: 100%;
+                margin: 0;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+                /* Required for stacking context */
+                z-index: 0;
+                /* Ensure it's behind the image */
+                top: 7vh;
+            }
+
+            .container-form-title>h1 {
+                font: normal normal 900 70px/50px Heebo;
+                text-align: center;
+                z-index: 2;
+                margin-top: 70%;
+                /* Ensure it's above other content */
+            }
+
+            .form-lables {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .form-control {
+                align-items: center;
+            }
+
+            .form-control>input>textarea {
+                width: 100%;
+
+            }
+
+            .form-control>label>textarea {
+                font: normal normal bold 10px/14px Heebo;
+                width: 100%;
+            }
+
+            .container-form-title>h1 {
+                font: normal normal 900 70px/50px Heebo;
+                text-align: center;
+            }
+
+            .container-form-title>p {
+                margin-top: 10%;
+                font: normal normal normal 35px/35px Heebo;
+            }
+
+            .container-form {
+                width: 100%;
+                margin: 0;
+                justify-content: center;
+                align-items: center;
+
+            }
+
+            .container-form-title {
+                width: 78%;
+                align-items: center;
+
+
+            }
+
+            .form-button {
+                align-items: center;
+
+            }
+
+            .footer-socialIcons {
+                display: flex;
+                justify-content: center;
+                position: relative;
+                z-index: 10000;
+                margin-top: 35%;
+                margin-bottom: 5%;
+            }
+
+            .fa-brands {
+                margin-left: 7%;
+            }
+
+            .socialIcons {
+                display: none;
+            }
+
+
+
+
+        }
+
+        @media (min-width: 360px) and (max-width: 376px) {
+            body {
+                overflow-x: hidden;
+                /* Prevent horizontal scrolling */
+            }
+
+            #container {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                width: 100%;
+                height: 100vh;
+                position: relative;
+            }
+
+            .container-img {
+                width: 20%;
+                /* Adjusted width */
+                margin-top: -10%;
+                /* Removed margin-top */
+                position: absolute;
+                /* Position absolutely */
+                top: 5vh;
+                /* Position at the top */
+                left: 0;
+                /* Align to the left */
+                z-index: 1;
+                /* Ensure it's above other content */
+                margin-left: 40%;
+            }
+
+            .container-form {
+                width: 100%;
+                margin: 0;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+                /* Required for stacking context */
+                z-index: 0;
+                /* Ensure it's behind the image */
+                top: 7vh;
+            }
+
+            .container-form-title>h1 {
+                font: normal normal 900 100px/70px Heebo;
+                text-align: center;
+                z-index: 2;
+                margin-top: 70%;
+                /* Ensure it's above other content */
+            }
+
+            .form-lables {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .form-control {
+                align-items: center;
+            }
+
+            .form-control>input>textarea {
+                width: 100%;
+
+            }
+
+            .form-control>label>textarea {
+                font: normal normal bold 10px/14px Heebo;
+                width: 100%;
+            }
+
+            .container-form-title>h1 {
+                font: normal normal 900 70px/50px Heebo;
+                text-align: center;
+            }
+
+            .container-form-title>p {
+                margin-top: 10%;
+                font: normal normal normal 35px/35px Heebo;
+            }
+
+            .container-form {
+                width: 100%;
+                margin: 0;
+                justify-content: center;
+                align-items: center;
+
+            }
+
+            .container-form-title {
+                width: 78%;
+                align-items: center;
+
+
+            }
+
+            .form-button {
+                align-items: center;
+                /* margin-top: -50%; */
+
+            }
+
+            .footer-socialIcons {
+                display: flex;
+                justify-content: center;
+                position: relative;
+                z-index: 10000;
+                margin-top: 50%;
+                margin-bottom: 5%;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="square-top-right"></div>
+    <div class="square-bottom-left"></div>
+
+    <header>
+
+        <div class="socialIcons">
+            <a href=""><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+    </header>
+
+    <div id="container">
+        <div dir="rtl" class="container-form">
+            <div class="container-form-title">
+                <h1>ייעוץ חינם</h1>
+                <p>לקבלת ייעוץ חינם, מוזמנים להשאיר פרטים ומומחה יחזור אליכם עם מענה.</p>
+            </div>
+            <form>
+                <div class="form-lables">
+                    <div class="form-control">
+                        <label for="name">שם מלא</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-control">
+                        <label for="email">אימייל</label>
+                        <input type="email" id="email" name="email" required>
+
+                    </div>
+
+                </div>
+                <div class="form-control">
+                    <label for="name">על מה תרצה להתייעץ? </label>
+                    <textarea id="massage" rows="4"></textarea>
+                </div>
+                <br>
+            </form>
+            <div class="form-button">
+                <button type="submit">שליחה</button>
+            </div>
+        </div>
+        <div class="container-img">
+            <img src="./landingPage5.png" alt="landingPage5">
+        </div>
+    </div>
+    <footer>
+
+        <div class="footer-socialIcons">
+            <a href=""><i class="fa-brands fa-instagram"></i></a>
+            <a href=""><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+            <a href=""><i class="fa-solid fa-phone"></i></a>
+
+        </div>
+    </footer>
+</body>
+
+</html>
