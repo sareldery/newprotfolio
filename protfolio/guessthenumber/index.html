@@ -12,16 +12,15 @@
 <body>
     <div class="container">
         <div class="row text-center">
-            <div class="col-sm-5">
-                <h3 class="display-3 text-danger">Guess the Number</h1>
-                    <p>You have 5 attempts to guess number (1-10)</p>
-                    <label for="guess">Your guess:</label>
-                    <input class="form-control" type="number" id="guess" />
-                    <button class="btn btn-outline-success" onclick="check()" id="checkBtn">Check</button>
+            <div class="col-12 col-md-5 mb-4 mb-md-0">
+                <h3 class="display-4 text-danger">Guess the Number</h3>
+                <p>You have 5 attempts to guess a number (1-10)</p>
+                <label for="guess">Your guess:</label>
+                <input class="form-control mb-3" type="number" id="guess" />
+                <button class="btn btn-outline-success w-100" onclick="check()" id="checkBtn">Check</button>
             </div>
-            <div class="col-sm-7" id="results"></div>
+            <div class="col-12 col-md-7" id="results"></div>
         </div>
-
     </div>
     <script>
         let num, attempts;
