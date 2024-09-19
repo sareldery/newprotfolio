@@ -45,24 +45,11 @@ Each project demonstrates a different aspect of my skills, from UI/UX design to 
 - **JavaScript**: Interactive features and functionality.
 - **Bootstrap**: Responsive design framework for a mobile-friendly experience.
 
-## Getting Started
+## Web url
 
-To run this project locally, follow these steps:
+Enter my website from the following link:
 
-1. Clone the repository:
-
-   ```bash
-   git clone https://github.com/yourusername/portfolio-website.git
-   ```
-
-2. Open the `index.html` file in your browser to explore the portfolio.
-
-## Contact
-
-If you'd like to get in touch, feel free to contact me via the form on the website or directly at:
-
-- Email: [your.email@example.com](mailto:your.email@example.com)
-- LinkedIn: [LinkedIn Profile](https://www.linkedin.com/in/yourprofile)
+https://sareldery.github.io/newprotfolio/ 
 
 ---
 
