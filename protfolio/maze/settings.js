@@ -51,7 +51,6 @@ function move(e) {
                 current = next;
                 newMaze.draw();
                 current.highlight(newMaze.columns);
-                // not required if goal is in bottom right
                 if (current.goal) complete.style.display = "block";
             }
             break;
@@ -82,7 +81,6 @@ function move(e) {
                 current = next;
                 newMaze.draw();
                 current.highlight(newMaze.columns);
-                // not required if goal is in bottom right
                 if (current.goal) complete.style.display = "block";
             }
             break;
